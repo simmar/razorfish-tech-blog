@@ -1,6 +1,10 @@
 require('dotenv').config();
+const withImages = require('next-images')
+const withPlugins = require("next-compose-plugins");
+const withFonts = require('next-fonts');
+const withSass = require('@zeit/next-sass')
 
-module.exports = {
+module.exports = withPlugins([withImages, withFonts], {
   async redirects() {
     return [
       {
@@ -15,4 +19,4 @@ module.exports = {
     CF_DELIVERY_ACCESS_TOKEN: process.env.CF_DELIVERY_ACCESS_TOKEN,
     CF_PREVIEW_ACCESS_TOKEN: process.env.CF_PREVIEW_ACCESS_TOKEN,
   },
-};
+})

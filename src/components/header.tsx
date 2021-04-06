@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'components/link';
+import logo from '../../public/logo.jpg';
 // type FooterProps = {
 
 // };
@@ -50,7 +51,7 @@ export function Header() {
                 </div>
                 <figure className="mb-0 mx-auto">
                   <a href="/homepage-v1.html">
-                    <img src="images/placeholder/logo.jpg" alt="" className="img-fluid logo" />
+                    <img src={logo} alt="" className="img-fluid logo" />
                   </a>
                 </figure>
                 <div className="collapse navbar-collapse justify-content-between" id="main_nav99">
