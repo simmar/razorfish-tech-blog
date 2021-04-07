@@ -3,6 +3,7 @@ export type { TypeComponent_section, TypeComponent_sectionFields } from './TypeC
 export type { TypeComponent_text, TypeComponent_textFields } from './TypeComponent_text';
 export type { TypeComponent_video, TypeComponent_videoFields } from './TypeComponent_video';
 export type { TypeComponent_image, TypeComponent_imageFields } from './TypeComponent_image';
+export type { TypeComponent_nav, TypeComponent_navFields } from './TypeComponent_nav';
 export type { TypeSeo, TypeSeoFields } from './TypeSeo';
 export type { TypePage, TypePageFields } from './TypePage';
 export type {

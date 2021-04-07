@@ -7,6 +7,7 @@ import { Text } from './text';
 import { Image } from './image';
 import { Video } from './video';
 import { Post } from './post';
+import { Nav } from './nav';
 import { Section } from './section';
 import { HelpCenterArticle } from './help-center-article';
 import { PageContentTypes, ComponentContentTypes, PageContentType } from '../../lib/constants';
@@ -56,7 +57,8 @@ const ContentTypeMap = {
   [ComponentContentTypes.Text]: Text,
   [ComponentContentTypes.Image]: Image,
   [ComponentContentTypes.Video]: Video,
-  [ComponentContentTypes.Post]: Post
+  [ComponentContentTypes.Post]: Post,
+  [ComponentContentTypes.Nav]: Nav
 };
 
 export { BlockRenderer };

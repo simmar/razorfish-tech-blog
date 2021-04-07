@@ -8,13 +8,13 @@ export const ComponentContentTypes = {
   Text: 'component_text',
   Image: 'component_image',
   Video: 'component_video',
+  Nav: 'nav',
   Post: 'post'
 };
 
 export const PageContentTypes = {
   HelpDeskArticle: 'page_help_center_article',
-  LandingPage: 'page_landing',
-  HomeTest: 'pageHomeTest2',
+  LandingPage: 'page_landing'
 };
 
 export const fallbackImage = {
