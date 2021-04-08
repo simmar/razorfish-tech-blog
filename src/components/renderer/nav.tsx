@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from '../link';
-import logo from '../../../public/logo.jpg';
+import imglogo from '../../../public/logo.jpg';
 import { TypeComponent_nav } from 'lib/types';
+import { Logo } from 'components/logo'
 
 export function Nav({ fields }: TypeComponent_nav) {
     console.log(fields)
@@ -17,13 +18,12 @@ export function Nav({ fields }: TypeComponent_nav) {
                     <span className="navbar-toggler-icon" />
                   </div>
                 </div>
-                <Link path="/">
-                    <figure className="mb-0 mx-auto">
+                    {/* <figure className="mb-0 mx-auto">
                     <a>
-                        <img src={logo} alt="" className="img-fluid logo" />
+                        <img src={imglogo} alt="" className="img-fluid logo" />
                     </a>
-                    </figure>
-                </Link>
+                    </figure> */}
+                <Logo color="purple"/>
                 <div className="collapse navbar-collapse justify-content-between" id="main_nav99">
                   <ul className="navbar-nav ml-auto ">
                       {navItems.map((item, index) =>

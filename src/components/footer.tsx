@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Logo } from 'components/logo'
 // type FooterProps = {
 
 // };
@@ -143,11 +143,9 @@ export function Footer() {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-md-4">
-                                        <figure className="image-logo">
-                                            <img src="images/placeholder/logo.jpg" alt="" className="logo-footer" />
-                                        </figure>
+                                        <Logo color="white"/>
                                     </div>
-                                    <div className="col-md-8 my-auto ">
+                                    {/* <div className="col-md-8 my-auto ">
 
                                         <div className="social__media">
 
@@ -180,7 +178,7 @@ export function Footer() {
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -229,8 +227,7 @@ export function Footer() {
                                         <ul className="list-inline">
                                             <li className="list-inline-item">
                                                 <span>
-                                                    Copyright © 2019 News and Magazine template based on Bootstrap 4 Theme
-                                                    by <a href="#">retenvi</a>
+                                                    ©2020 Razorfish · All rights reserved
                                                 </span>
                                             </li>
                                         </ul>
