@@ -20,13 +20,12 @@ export default function Landing({ page }: LandingProps) {
   }
 
   const content = page.fields.content as TypePage_landing;
-  const { hero, sections = [], nav } = content?.fields;
+  const { sections = [], nav } = content?.fields;
 
   return (
     <div className="w-full pb-16 lg:pb-24">
       <PageHead page={page} />
       <BlockRenderer block={nav} />
-      <BlockRenderer block={hero} />
       <BlockRenderer block={sections} />
     </div>
   )

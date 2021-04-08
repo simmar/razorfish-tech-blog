@@ -7,7 +7,7 @@ import { PreviewBanner } from 'components/preview-banner';
 // import { TopNavigation } from 'components/top-navigation';
 import App, { AppContext } from 'next/app';
 import { getLocale, LocaleContext, UnknownLocale } from 'lib/translations';
-import { Layout } from '../components/layout';
+import { Layout } from '../components/renderer/layout';
 
 function HelpdeskApp({ Component, pageProps }) {
   const { locale, ...otherPageProps } = pageProps;

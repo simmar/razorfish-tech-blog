@@ -5,7 +5,6 @@ import { TypeComponent_nav } from 'lib/types';
 import { Logo } from 'components/logo'
 
 export function Nav({ fields }: TypeComponent_nav) {
-    console.log(fields)
     const navItems = fields.navItems;
 
     return (

@@ -9,7 +9,9 @@ export const ComponentContentTypes = {
   Image: 'component_image',
   Video: 'component_video',
   Nav: 'nav',
-  Post: 'post'
+  Post: 'post',
+  RecentPosts: 'componentRecentPosts',
+  PopularPosts: 'componentPopularPosts'
 };
 
 export const PageContentTypes = {

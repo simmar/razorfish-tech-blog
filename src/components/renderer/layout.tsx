@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from './renderer/header'
+import { Header } from './header'
 import { Footer } from './footer'
 
 type LayoutProps = {

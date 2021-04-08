@@ -10,6 +10,8 @@ import { Post } from './posts/post';
 import { Section } from './section';
 import { Text } from './text';
 import { Video } from './video';
+import { RecentPosts } from './recent-posts';
+import { PopularPosts } from './popular-posts';
 
 type BlockRendererProps = {
   block: any;
@@ -58,6 +60,8 @@ const ContentTypeMap = {
   [ComponentContentTypes.Video]: Video,
   [ComponentContentTypes.Post]: Post,
   [ComponentContentTypes.Nav]: Nav,
+  [ComponentContentTypes.RecentPosts]: RecentPosts,
+  [ComponentContentTypes.PopularPosts]: PopularPosts,
 };
 
 export { BlockRenderer };
