@@ -9,6 +9,7 @@ export interface TypeComponent_heroFields {
   image: Contentful.Asset;
   ctaText: Contentful.EntryFields.Symbol;
   ctaLink?: Contentful.Entry<TypePageFields>;
+  slider?: Contentful.Entry<any>;
 }
 
 export type TypeComponent_hero = Contentful.Entry<TypeComponent_heroFields>;

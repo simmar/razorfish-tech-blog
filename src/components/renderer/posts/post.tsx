@@ -4,6 +4,7 @@ import React from 'react';
 
 export function Post({ fields }: TypeComponent_text) {
   // const { title, text } = fields;
+  //console.log('fields POst', fields);
 
   return (
     <>
