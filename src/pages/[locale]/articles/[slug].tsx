@@ -9,10 +9,8 @@ import { PageLink } from 'components/page-link';
 import { PageHead } from 'components/page-head';
 import { PageContentTypes } from 'lib/constants';
 import { getPage, getPagesOfType } from 'lib/api';
-import { RelatedPages } from 'components/RelatedPages';
-import { MobileNavigation } from 'components/mobile-navigation';
 import { BlockRenderer } from 'components/renderer/block-renderer';
-import { TypePage, TypePage_help_center_article } from 'lib/types';
+import { TypePage, TypePage_landing } from 'lib/types';
 
 const NoBodyAlert = () => {
   return (
@@ -23,56 +21,25 @@ const NoBodyAlert = () => {
   );
 };
 
-const OtherPagesSidebar = ({ pages }: { pages: Array<TypePage> }) => {
-  return (
-    <ul className="list-reset text-sm">
-      {pages.map((page) => (
-        <PageLink key={page.fields.slug} page={page} />
-      ))}
-    </ul>
-  );
-};
-
 type ArticleProps = {
   page: TypePage;
-  otherPages: Array<TypePage>;
 };
 
-export default function Article({ page, otherPages }: ArticleProps) {
+export default function Article({ page }: ArticleProps) {
   const router = useRouter();
-  const article = page?.fields.content as TypePage_help_center_article;
+  const content = page?.fields.content as TypePage_landing;
 
-  if (!router.isFallback && !article) {
+  if (!router.isFallback && !content) {
     return <ErrorPage statusCode={404} />;
   }
 
-  const { body = [], relatedPages = [] } = article?.fields || {};
+  const { sections = [], nav } = content?.fields || {};
 
   return (
     <>
       <PageHead page={page} />
-      <div className="container w-full flex flex-wrap mx-auto max-w-screen-xl p-8 pb-16 lg:pb-24">
-        <div className="w-full lg:w-1/5 px-4 lg:px-0 py-8 text-xl text-gray-800 leading-normal">
-          <p className="text-sm font-medium py-2 lg:px-5 lg:pb-4 text-gray-700 tracking-wide uppercase">
-            Help center
-          </p>
-          <MobileNavigation pages={otherPages} />
-          <div
-            className="w-full inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent"
-            style={{ top: '5em' }}>
-            <OtherPagesSidebar pages={otherPages} />
-          </div>
-        </div>
-
-        <div className="w-full lg:w-4/5 py-8 px-4 lg:px-8 lg:mt-0 leading-normal">
-          <div className="prose lg:px-8 max-w-full break-words">
-            <h1>{page.fields.title}</h1>
-            {body.length > 0 ? <BlockRenderer block={body} /> : <NoBodyAlert />}
-          </div>
-
-          {relatedPages.length > 0 ? <RelatedPages pages={relatedPages} /> : null}
-        </div>
-      </div>
+      <BlockRenderer block={nav} />
+      <BlockRenderer block={sections} />
     </>
   );
 }
@@ -80,7 +47,7 @@ export default function Article({ page, otherPages }: ArticleProps) {
 export const getServerSideProps = withLocale(async (locale, { params, query }) => {
   const slug = String(params.slug);
   const preview = isPreviewEnabled(query);
-  const pageContentType = PageContentTypes.HelpDeskArticle;
+  const pageContentType = PageContentTypes.LandingPage;
   const [page, otherPages] = await Promise.all([
     getPage({ slug, preview, locale, pageContentType }),
     getPagesOfType({ preview, locale, pageContentType }),

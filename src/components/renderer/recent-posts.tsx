@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getPosts } from 'lib/api';
+import { Link } from 'components/link';
 // import { withLocale } from 'lib/translations';
 
 type RecentPostsProps = {
@@ -36,22 +37,28 @@ export function RecentPosts({fields}) {
                     <div className="col-sm-12 col-md-6 mb-4" key={index}>
                         <div className="card__post ">
                             <div className="card__post__body card__post__transition">
-                                <a href="./card-article-detail-v1.html">
-                                    <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
-                                </a>
+                                <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                    <a>
+                                        <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
+                                    </a>
+                                </Link>
                                 <div className="card__post__content bg__post-cover">
                                     <div className="card__post__category">
                                         {post.fields.category.fields.title}
                                     </div>
                                     <div className="card__post__title">
                                         <h5>
-                                            <a href="./card-article-detail-v1.html">{post.fields.titre}</a>
+                                            <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                <a>{post.fields.titre}</a>
+                                            </Link>
                                         </h5>
                                     </div>
                                     <div className="card__post__author-info">
                                         <ul className="list-inline">
                                             <li className="list-inline-item">
-                                                <a href="./card-article-detail-v1.html">by {post.fields.author}</a>
+                                                <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                    <a>by {post.fields.author}</a>
+                                                </Link>
                                             </li>
                                             <li className="list-inline-item">
                                                 <span>{displayDate(post.fields.date)}</span>
@@ -72,9 +79,11 @@ export function RecentPosts({fields}) {
                                 <div className="mb-3" key={index}>
                                     <div className="card__post card__post-list">
                                         <div className="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
-                                            </a>
+                                            <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                <a>
+                                                    <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
+                                                </a>
+                                            </Link>
                                         </div>
                                         <div className="card__post__body ">
                                             <div className="card__post__content">
@@ -90,7 +99,9 @@ export function RecentPosts({fields}) {
                                                 </div>
                                                 <div className="card__post__title">
                                                     <h6>
-                                                        <a href="./card-article-detail-v1.html">{post.fields.titre}</a>
+                                                        <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                            <a>{post.fields.titre}</a>
+                                                        </Link>
                                                     </h6>
                                                 </div>
                                             </div>
@@ -107,9 +118,11 @@ export function RecentPosts({fields}) {
                                 <div className="mb-3" key={index}>
                                     <div className="card__post card__post-list">
                                         <div className="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
-                                            </a>
+                                            <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                <a>
+                                                    <img src={post.fields.media.fields.file.url} className="img-fluid" alt="" />
+                                                </a>
+                                            </Link>
                                         </div>
                                         <div className="card__post__body ">
                                             <div className="card__post__content">
@@ -125,7 +138,9 @@ export function RecentPosts({fields}) {
                                                 </div>
                                                 <div className="card__post__title">
                                                     <h6>
-                                                        <a href="./card-article-detail-v1.html">{post.fields.titre}</a>
+                                                        <Link path={'articles/' + post.fields.titre.replace(' ', '-').toLowerCase()}>
+                                                            <a>{post.fields.titre}</a>
+                                                        </Link>
                                                     </h6>
                                                 </div>
                                             </div>

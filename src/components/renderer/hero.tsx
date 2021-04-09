@@ -4,7 +4,6 @@ import { TypeComponent_hero } from 'lib/types';
 import { SliderHero } from './hero-slider';
 import { PostMiniV1 } from './posts/postMiniV1';
 export const Hero = ({ fields }: TypeComponent_hero) => {
-  console.log('fields', fields);
   return (
     <section>
       {/* Popular news  header*/}
