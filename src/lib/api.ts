@@ -61,3 +61,8 @@ export async function getPagesOfType(params: GetPagesOfTypeParams) {
 
   return pages ? pages.map((page) => parsePage(page)) : [];
 }
+
+export async function getPosts() {
+  const posts = await getClient(false).getEntries({content_type: 'componentPost'})
+  return posts?.items
+}

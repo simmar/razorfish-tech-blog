@@ -3,8 +3,6 @@
 import React from 'react';
 
 export function Post({ posts }) {
-  console.log('post test', posts);
-
   const displayDate = (date) => {
     const _date = new Date(date);
 

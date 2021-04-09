@@ -16,14 +16,16 @@ export function Section(section: TypeComponent_section) {
   }
 
   return (
-    <section className="text-gray-700 body-font">
-      <div className="mx-auto max-w-screen-xl">
-        <div className="flex flex-row flex-wrap px-6 lg:px-4 mx-auto">
-          {columns.map((column, index) => (
-            <Column key={index} column={column} />
-          ))}
+    <section className="pt-0">
+        <div className="popular__section-news">
+          <div className="container">
+            <div className="flex flex-row flex-wrap lg:px-4">
+              {columns.map((column, index) => (
+                <Column key={index} column={column} />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
     </section>
   );
 }
