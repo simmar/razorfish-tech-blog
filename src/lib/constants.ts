@@ -11,12 +11,12 @@ export const ComponentContentTypes = {
   Nav: 'nav',
   Post: 'componentPost',
   RecentPosts: 'componentRecentPosts',
-  PopularPosts: 'componentPopularPosts'
+  PopularPosts: 'componentPopularPosts',
 };
 
 export const PageContentTypes = {
   HelpDeskArticle: 'page_help_center_article',
-  LandingPage: 'page_landing'
+  LandingPage: 'page_landing',
 };
 
 export const fallbackImage = {

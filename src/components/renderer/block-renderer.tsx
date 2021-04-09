@@ -6,12 +6,12 @@ import { HelpCenterArticle } from './help-center-article';
 import { Hero } from './hero';
 import { Image } from './image';
 import { Nav } from './nav';
-import { Post } from './posts/post';
+import { PopularPosts } from './popular-posts';
+import { Post } from './post';
+import { RecentPosts } from './recent-posts';
 import { Section } from './section';
 import { Text } from './text';
 import { Video } from './video';
-import { RecentPosts } from './recent-posts';
-import { PopularPosts } from './popular-posts';
 
 type BlockRendererProps = {
   block: any;
