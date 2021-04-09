@@ -8482,7 +8482,7 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 .text-primary {
-  color: #c00 !important;
+  color: #9743ff !important;
 }
 a.text-primary:hover,
 a.text-primary:focus {
@@ -10032,9 +10032,9 @@ input[type='number'] {
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 8px;
-  background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: -ms-linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   line-height: 15px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -10260,13 +10260,13 @@ input[type='number'] {
   font-size: 14px;
 }
 .card__post-list .card__post__content .card__post__title h6 a:hover {
-  color: #c00;
+  color: #9743ff;
 }
 .wrapper__list__article-small .card__post .card__post__content .card__post__title h6 a {
   color: #000;
 }
 .wrapper__list__article-small .card__post .card__post__content .card__post__title h6 a:hover {
-  color: #c00;
+  color: #9743ff;
 }
 .card__post__transition img {
   transition: 0.3s ease-in-out;
@@ -10293,9 +10293,9 @@ input[type='number'] {
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 8px;
-  background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: -ms-linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   line-height: 15px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -10664,9 +10664,9 @@ input[type='number'] {
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 8px;
-  background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: -ms-linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   line-height: 15px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -11249,9 +11249,9 @@ input[type='number'] {
   font-size: 10px;
   margin-bottom: 5px;
   padding: 5px 8px;
-  background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: -ms-linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   line-height: 15px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -11318,7 +11318,7 @@ input[type='number'] {
   left: 0;
   width: 50px;
   height: 5px;
-  background: #c00;
+  background: #9743ff;
   z-index: 1;
 }
 .wrapper__list__article .border_section:after {
@@ -12187,9 +12187,9 @@ input[type='number'] {
 .trending-news .trending-news-inner .title {
   float: left;
   padding: 10px 15px;
-  background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: -ms-linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+  background: linear-gradient(285deg, #9743ff 27%, #5700c2 100%, #fff 100%);
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -12885,7 +12885,7 @@ input[type='number'] {
   color: #212529;
 }
 .navbar a:hover {
-  color: #c00;
+  color: #9743ff;
 }
 .topbar {
   background-color: #000;
@@ -13517,7 +13517,7 @@ body.offcanvas-active {
 }
 .navbar-soft .navbar-nav .nav-item:hover .nav-link,
 .navbar-soft .navbar-nav .nav-item.show .nav-link {
-  border-bottom: 2px solid #c00;
+  border-bottom: 2px solid #9743ff;
   color: #111;
 }
 .navbar-soft .dropdown-menu {

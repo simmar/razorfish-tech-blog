@@ -41,7 +41,7 @@ export function SliderHero({ slider }) {
                                     <div className="card__post__author-info">
                                         <ul className="list-inline">
                                             <li className="list-inline-item">
-                                                <a href="#">{item.fields.author}l</a>
+                                                <a href="#">{item.fields.author}</a>
                                             </li>
                                             <li className="list-inline-item">
                                                 <span>{displayDate(item.fields.date)}</span>
