@@ -4,7 +4,7 @@ import Slider from "react-slick";
 export function SliderHero({ slider }) {
     const heroSlider = slider.fields.posts;
 
-    var settings = {
+    let settings = {
         dots: false,
         infinite: true,
         autoplay: true,
