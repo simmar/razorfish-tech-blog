@@ -1,43 +1,46 @@
 /* eslint-disable @typescript-eslint/camelcase */
-import { TypeComponent_text } from 'lib/types';
+
 import React from 'react';
 
-export function Post({ fields }: TypeComponent_text) {
-  // const { title, text } = fields;
-  //console.log('fields POst', fields);
+export function Post({ posts }) {
+  console.log('post test', posts);
+
+  const displayDate = (date) => {
+    const _date = new Date(date);
+
+    return _date.toLocaleDateString() + ' ' + _date.toLocaleTimeString();
+  };
 
   return (
-    <>
-      {/* POST */}
-      {/* {title ? <BlockTitle title={title} /> : null} */}
-      {/* {renderRichText(text as any)} */}
-      <div className="card__post ">
-        <div className="card__post__body card__post__transition">
+    <div className="card__post">
+      {posts.map((item, index) => (
+        <div className="card__post__body card__post__transition" key={index}>
           <a href="./card-article-detail-v1.html">
-            <img src="images/placeholder/600x400.jpg" className="img-fluid" alt="" />
+            <img src={item.fields.media.fields.file.url} className="img-fluid" alt="" />
           </a>
           <div className="card__post__content bg__post-cover">
-            <div className="card__post__category">politics</div>
+            <div className="card__post__category">{item.fields.category.fields.title}</div>
             <div className="card__post__title">
               <h5>
                 <a href="./card-article-detail-v1.html">
-                  Barack Obama and Family Visit borobudur temple enjoy holiday indonesia.
+                  {/* {item.fields.text.content.content.value} */}
+                  {item.fields.titre}
                 </a>
               </h5>
             </div>
             <div className="card__post__author-info">
               <ul className="list-inline">
                 <li className="list-inline-item">
-                  <a href="./card-article-detail-v1.html">by david hall</a>
+                  <a href="./card-article-detail-v1.html">{item.fields.author}</a>
                 </li>
                 <li className="list-inline-item">
-                  <span>Descember 09, 2016</span>
+                  <span>{displayDate(item.fields.date)}</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
