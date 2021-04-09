@@ -2,8 +2,9 @@
 // import { isRichText, renderRichText } from 'lib/rich-text';
 import { TypeComponent_hero } from 'lib/types';
 import { SliderHero } from './hero-slider';
-import { Post } from './posts/post';
+import { PostMiniV1 } from './posts/postMiniV1';
 export const Hero = ({ fields }: TypeComponent_hero) => {
+  console.log('fields', fields);
   return (
     <section>
       {/* Popular news  header*/}
@@ -15,9 +16,9 @@ export const Hero = ({ fields }: TypeComponent_hero) => {
             </div>
             <div className="col-md-4">
               <div className="popular__news-right">
-                {/* Post Article */}
-                <Post posts={fields.posts} />
-                {/* Post Article */}
+                {fields.posts.map((item, index) => (
+                  <PostMiniV1 post={item} key={index} />
+                ))}
               </div>
             </div>
           </div>

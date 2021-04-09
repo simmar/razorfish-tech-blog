@@ -10,7 +10,7 @@ export interface TypeComponent_heroFields {
   ctaText: Contentful.EntryFields.Symbol;
   ctaLink?: Contentful.Entry<TypePageFields>;
   slider?: Contentful.Entry<any>;
-  posts?: Contentful.Entry<any>;
+  posts?: Contentful.Entry<any>[];
 }
 
 export type TypeComponent_hero = Contentful.Entry<TypeComponent_heroFields>;
