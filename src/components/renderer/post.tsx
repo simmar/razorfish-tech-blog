@@ -1,6 +1,13 @@
 import React from 'react';
 
-export function Post() {
+export function Post({ fields }) {
+  console.log('fields', fields);
+  const displayDate = (date) => {
+    const _date = new Date(date);
+
+    return _date.toLocaleDateString() + ' ' + _date.toLocaleTimeString();
+  };
+
   return (
     <div>
       <section className="pb-80">
@@ -25,102 +32,71 @@ export function Post() {
                  </div> */}
             <div className="col-md-8">
               {/* content article detail */}
+
+              <div className="wrap__article-detail-image">
+                <figure>
+                  <img
+                    src={fields.media.fields.file.url}
+                    alt={fields.media.fields.file.fileName}
+                    className="img-fluid"
+                  />
+                </figure>
+              </div>
               {/* Article Detail */}
               <div className="wrap__article-detail">
                 <div className="wrap__article-detail-title">
-                  <h1>These Are the 5 Big Tech Stories to Watch in 2017</h1>
-                  <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, hic.</h3>
+                  <h1>{fields.titre}</h1>
                 </div>
                 <hr />
                 <div className="wrap__article-detail-info">
                   <ul className="list-inline">
+                    {' '}
                     <li className="list-inline-item">
                       <figure className="image-profile">
-                        <img src="images/placeholder/logo.jpg" alt="" />
+                        <img
+                          src={fields.media.fields.file.url}
+                          alt={fields.media.fields.file.fileName}
+                        />
                       </figure>
                     </li>
                     <li className="list-inline-item">
                       <span>by</span>
-                      <a href="#">john doe,</a>
+                      <a href="#">{fields.author}</a>
                     </li>
                     <li className="list-inline-item">
-                      <span className="text-dark text-capitalize ml-1">descember 09, 2016</span>
+                      <span className="text-dark text-capitalize ml-1">
+                        {displayDate(fields.date)}
+                      </span>
                     </li>
                     <li className="list-inline-item">
                       <span className="text-dark text-capitalize">in</span>
-                      <a href="#">business</a>
+                      <a href="#">{fields.category.fields.title}</a>
                     </li>
                   </ul>
                 </div>
+                <hr />
                 <div className="wrap__article-detail-image mt-4">
                   <figure>
                     <img src="images/placeholder/800x500.jpg" alt="" className="img-fluid" />
                   </figure>
                 </div>
                 <div className="wrap__article-detail-content">
-                  <div className="total-views">
-                    <div className="total-views-read">
-                      15.k
-                      <span>views</span>
-                    </div>
-                    <ul className="list-inline">
-                      <span className="share">share on:</span>
-                      <li className="list-inline-item">
-                        <a className="btn btn-social-o facebook" href="#">
-                          <i className="fa fa-facebook-f" />
-                          <span>facebook</span>
-                        </a>
-                      </li>
-                      <li className="list-inline-item">
-                        <a className="btn btn-social-o twitter" href="#">
-                          <i className="fa fa-twitter" />
-                          <span>twitter</span>
-                        </a>
-                      </li>
-                      <li className="list-inline-item">
-                        <a className="btn btn-social-o whatsapp" href="#">
-                          <i className="fa fa-whatsapp" />
-                          <span>whatsapp</span>
-                        </a>
-                      </li>
-                      <li className="list-inline-item">
-                        <a className="btn btn-social-o telegram" href="#">
-                          <i className="fa fa-telegram" />
-                          <span>telegram</span>
-                        </a>
-                      </li>
-                      <li className="list-inline-item">
-                        <a className="btn btn-linkedin-o linkedin" href="#">
-                          <i className="fa fa-linkedin" />
-                          <span>linkedin</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <p className="has-drop-cap-fluid">
-                    Even the all-powerful Pointing has no control about the blind texts it is an
-                    almost unorthographic life One day however a small line of blind text by the
-                    name of Lorem Ipsum decided to leave for the far World of Grammar. Far far away,
-                    behind the word mountains, far from the countries Vokalia and Consonantia, there
-                    live the blind texts. Separated they live in Bookmarksgrove right at the coast
-                    of the Semantics, a large language ocean. A small river named Duden flows by
-                    their place and supplies it with the necessary regelialia.
-                    <br />
-                    <br />
-                    The Big Oxmox advised her not to do so, because there were thousands of bad
-                    Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-                    didn’t listen. On her way she met a copy. The copy warned the Little Blind Text,
-                    that where it came from it would have been rewritten a thousand times and
-                    everything that was left from its origin would be the word “and” and the Little
-                    Blind Text should turn around and return to its own, safe country.
-                    <br />
-                    The Big Oxmox advised her not to do so, because there were thousands of bad
-                    Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-                    didn’t listen. On her way she met a copy. The copy warned the Little Blind Text,
-                    that where it came from it would have been rewritten a thousand times and
-                    everything that was left from its origin would be the word “and” and the Little
-                    Blind Text should turn around and return to its own, safe country.
-                  </p>
+                  {fields.text.content.map((item, index) => {
+                    console.log('nodeType', item.nodeType);
+
+                    return (
+                      <div key={index}>
+                        {item.content.map((content, index) => {
+                          return (
+                            <p className="has-drop-cap-fluid" key={index}>
+                              {content.value})
+                            </p>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+
                   {/* Blockquote  */}
                   <blockquote className="block-quote">
                     <p>
