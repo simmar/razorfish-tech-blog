@@ -1,15 +1,125 @@
 import React from 'react';
-
+type Item = {
+  fields: any;
+  content: any;
+  text: any;
+};
 export function Post({ fields }) {
-  console.log('fields', fields);
+  console.log('fields post', fields);
+
+  const content = fields.text.content;
+  // console.log('content', content);
+
+  // content.map((content) => {
+  //   console.log('content', content);
+  // })
+  // console.log('contentttt', content);
+
   const displayDate = (date) => {
     const _date = new Date(date);
 
-    return _date.toLocaleDateString() + ' ' + _date.toLocaleTimeString();
+    return _date.toLocaleDateString();
   };
 
+  // const SideMenu = ({ data }) => {
+  //   console.log('data', data);
+  //   if (!data) {
+  //     return null;
+  //   }
+  //   return (
+  //     <ul className="toto">
+  //       {
+  //         Array.isArray(data) ? data.map((item, index) => {
+  //           // console.log('item', item);
+  //           // if (item.nodeType === "blockquote") {
+
+  //           //   console.log('item', item);
+
+  //           //   {
+  //           //     item.content.map((content) => {
+  //           //       console.log('content', content);
+  //           //     })
+  //           //   }
+
+  //           //   return (<li key={index}>
+  //           //     tetx
+  //           //     {item.content.value && <SideMenu data={item.content.value} />}
+  //           //   </li>);
+  //           // }
+  //           {
+  //             item.content.map((content) => {
+  //               console.log('content', content.value);
+  //             })
+  //           }
+  //         }) : null
+  //       }
+  //     </ul>
+  //   );
+  // }
   return (
     <div>
+      {/* <SideMenu data={fields.text.content} /> */}
+      {/* <ul className="navbar-nav ml-auto ">
+        {content.map((item, index) => {
+          console.log('item', item);
+          <>
+            {item.content.map((subContent, subIndex) => {
+              console.log('subContent', subContent.value);
+              <li key={index}>
+                {!item.content ?
+                  <li>
+                    {subContent.value}
+                  </li>
+                  : <>
+                    {subContent.content.map((subSubContent, subSubIndex) => {
+                      console.log('subSubContent', subSubContent.value);
+                      <li key={subSubIndex}>
+                        {subSubContent.value}
+                      </li>
+                    })}
+                  </>}
+              </li>
+
+
+              // <li>
+              //   {subContent.content.map((subSubContent, subSubIndex) => {
+              //     console.log('subSubContent', subSubContent.value);
+              //     <li key={subSubIndex}>
+
+              //     </li>
+              //   })}
+              // </li>
+            })}
+          </>
+        }
+        )}
+      </ul> */}
+
+      <div className="toto">
+        {content.map((item, index) => (
+          <>
+            {item.content.map((subItem, subIndex) => (
+              <>
+                {subItem.content ? (
+                  <p key={subItem}>
+                    {/* {console.log('item content', item)}
+                    {console.log('subitem content', subItem.content.value)} */}
+                    {subItem.value}
+                  </p>
+                ) : (
+                  <>
+                    {/* {subItem.content.map((subSubItem, subSubIndex) =>
+                      <p key={subSubIndex}>
+                        {subSubItem.content.value}
+                      </p>
+                    )} */}
+                  </>
+                )}
+              </>
+            ))}
+          </>
+        ))}
+      </div>
       <section className="pb-80">
         <div className="container">
           <div className="row">
@@ -81,38 +191,54 @@ export function Post({ fields }) {
                   </figure>
                 </div>
                 <div className="wrap__article-detail-content">
-                  {fields.text.content.map((item, index) => {
-                    console.log('nodeType', item.nodeType);
-
+                  {fields.text.content.map((item) => {
                     return (
-                      <div key={index}>
+                      <>
                         {item.content.map((content, index) => {
                           return (
                             <p className="has-drop-cap-fluid" key={index}>
-                              {content.value})
+                              {content.value}
                             </p>
                           );
                         })}
-                      </div>
+                      </>
                     );
                   })}
 
                   {/* Blockquote  */}
                   <blockquote className="block-quote">
-                    <p>
-                      It is a long established fact that a reader will be distracted by the readable
-                      content of a page when looking at its layout.
-                    </p>
-                    <cite>Tom Cruise</cite>
+                    {/* {fields.text.content.map((item) => {
+                      // console.log('nodeType', item.nodeType);
+
+                      return (
+                        <>
+                          {item.content.map((content) => {
+                            console.log('content', content);
+                            return (
+                              <>
+                                {content.content.map((blockquote, index) => {
+                                  return (
+                                    <p className="has-drop-cap-fluid" key={index}>
+                                      {blockquote.value}
+                                    </p>
+                                  )
+                                })}
+                              </>
+                            );
+                          })}
+                        </>
+                      );
+                    })} */}
                   </blockquote>
+
                   {/* Blockquote */}
-                  <h5>How Tech Startup Survive Without Funding</h5>
+                  {/* <h5>How Tech Startup Survive Without Funding</h5>
                   <p>
                     Far far away, behind the word mountains, far from the countries Vokalia and
                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
                     right at the coast of the Semantics, a large language ocean. A small river named
                     Duden flows by their place and supplies it with the necessary regelialia.
-                  </p>
+                  </p> */}
                 </div>
               </div>
               {/* end content article detail */}
@@ -123,21 +249,13 @@ export function Post({ fields }) {
                   <li className="list-inline-item">
                     <i className="fa fa-tags"></i>
                   </li>
-                  <li className="list-inline-item">
-                    <a href="#">#property</a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">#sea</a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">#programming</a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">#sea</a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">#property</a>
-                  </li>
+                  {fields.tags.map((tag, index) => {
+                    return (
+                      <li className="list-inline-item" key={index}>
+                        <a href="#">{tag.fields.title}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               {/* end tags*/}

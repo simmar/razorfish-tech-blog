@@ -1,15 +1,8 @@
-import React from 'react'
-import { TopNav } from './topnav';
+import React from 'react';
 // type FooterProps = {
 
 // };
 
 export function Header() {
-    return (
-        <header className="bg-light">
-            <TopNav />
-        </header>
-    )
+  return <header className="bg-light">{/* <TopNav /> */}</header>;
 }
-
-

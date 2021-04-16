@@ -11,6 +11,7 @@ import { Post } from './post';
 import { RecentPosts } from './recent-posts';
 import { Section } from './section';
 import { Text } from './text';
+import { TopNav } from './topnav';
 import { Video } from './video';
 
 type BlockRendererProps = {
@@ -60,6 +61,7 @@ const ContentTypeMap = {
   [ComponentContentTypes.Video]: Video,
   [ComponentContentTypes.Post]: Post,
   [ComponentContentTypes.Nav]: Nav,
+  [ComponentContentTypes.TopNav]: TopNav,
   [ComponentContentTypes.RecentPosts]: RecentPosts,
   [ComponentContentTypes.PopularPosts]: PopularPosts,
 };
