@@ -8892,7 +8892,7 @@ h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: #9743ff;
 }
 p {
   font-family: 'Montserrat', sans-serif;
@@ -9720,7 +9720,7 @@ input[type='number'] {
 .breadcrumbs__item--current {
   color: #c00;
 }
-.block-quote {
+blockquote {
   background-color: #fafafa;
   padding: 30px 30px 30px 70px !important;
   line-height: 25px;
@@ -9728,7 +9728,7 @@ input[type='number'] {
   position: relative;
   margin: 20px 0;
 }
-.block-quote::before {
+blockquote::before {
   font-family: FontAwesome;
   content: '\f10d';
   position: absolute;
@@ -9738,11 +9738,11 @@ input[type='number'] {
   font-size: 25px;
   font-style: normal;
 }
-.block-quote cite {
+blockquote cite {
   position: relative;
   padding-left: 17px;
 }
-.block-quote cite::before {
+blockquote cite::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -12888,7 +12888,7 @@ input[type='number'] {
   color: #9743ff;
 }
 .topbar {
-  background-color: #000;
+  background-color: #9743ff;
   padding: 0;
   min-height: 50px;
 }
@@ -13552,7 +13552,7 @@ body.offcanvas-active {
   background-color: #1b1c26;
 }
 .bg__footer-dark {
-  background-color: #000;
+  background-color: #9743ff;
 }
 .border-top-5 {
   border-top: 5px solid #c00;
